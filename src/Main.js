@@ -33,7 +33,7 @@ const Main = () => {
             <Text>Main Component</Text>
             {questions.map(question => {
                 return(
-                    <Text>{question.question}</Text>
+                    <Text>{atob(question.question)}</Text>
                 )
             })}
         </View>
