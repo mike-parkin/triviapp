@@ -8,30 +8,15 @@ import {
 import { getQuestions } from '../api/openTDb'
 
 
-const MainMenu = () => {
-    const [ questions, setQuestions ] = useState([])
-
-    const fetchQuestions = () => {
-        return getQuestions()
-        .then(response => {
-            console.log(response)
-            setQuestions(response.data.results)
-        })
-    }
-    
-    useEffect(() => {
-        fetchQuestions()
-    },[])
+const MainMenu = ({ navigation }) => {
     
     return (
         <View>
-            {questions.map(question => {
-                return(
-                    // the response comes through encoded with base64 'atob()' converts this into a string
-                    <Text>{atob(question.question)}</Text>
-                )
-            })}
-        </View>
+            <Text>Main Menu</Text>
+            <Button
+                title="Go to QuizBuilder"
+            />
+        </View>    
     )
 }
 
