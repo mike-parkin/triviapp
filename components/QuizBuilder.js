@@ -8,12 +8,11 @@ import {
 } from 'react-native'
 import RNPickerSelect from 'react-native-picker-select' 
 
-import { getQuestions } from './api/openTDb'
-
 const QuizBuilder = () => {
 
     return (
         <View>
+            <Text>QuizBuilder</Text>
             <View>
                 <RNPickerSelect
                     items={[

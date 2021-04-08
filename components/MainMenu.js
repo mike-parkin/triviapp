@@ -5,7 +5,7 @@ import {
     View,
     Text,
 } from 'react-native'
-import { getQuestions } from '../api/openTDb'
+
 
 
 const MainMenu = ({ navigation }) => {
@@ -15,6 +15,7 @@ const MainMenu = ({ navigation }) => {
             <Text>Main Menu</Text>
             <Button
                 title="Go to QuizBuilder"
+                onPress={() => navigation.navigate('QuizBuilder')}
             />
         </View>    
     )

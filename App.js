@@ -6,6 +6,7 @@ import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, View } from 'react-native'
 
 import MainMenu from './components/MainMenu'
+import QuizBuilder from './components/QuizBuilder' 
 
 const Stack = createStackNavigator()
 
@@ -14,6 +15,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name='MainMenu' component={MainMenu} />
+        <Stack.Screen name='QuizBuilder' component={QuizBuilder} />
       </Stack.Navigator>
     </NavigationContainer>
   );
