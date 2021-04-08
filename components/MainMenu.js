@@ -8,7 +8,7 @@ import {
 import { getQuestions } from '../api/openTDb'
 
 
-const Main = () => {
+const MainMenu = () => {
     const [ questions, setQuestions ] = useState([])
 
     const fetchQuestions = () => {
@@ -25,16 +25,14 @@ const Main = () => {
     
     return (
         <View>
-            <Text>Main Component</Text>
             {questions.map(question => {
                 return(
                     // the response comes through encoded with base64 'atob()' converts this into a string
                     <Text>{atob(question.question)}</Text>
                 )
             })}
-            <Button onPress={} />
         </View>
     )
 }
 
-export default Main
+export default MainMenu

@@ -1,19 +1,20 @@
 import 'react-native-gesture-handler'
-import React from 'react';
-import { NavigationContainer} from '@react-navigation/native'
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, View } from 'react-native'
 
-import Main from './components/Main'
-import { NavigationContainer } from '@react-navigation/native';
+import MainMenu from './components/MainMenu'
+
+const Stack = createStackNavigator()
 
 export default function App() {
   return (
     <NavigationContainer>
-      <View style={styles.container}>
-        <Main />
-        <StatusBar style="auto" />
-      </View>
+      <Stack.Navigator>
+        <Stack.Screen name='MainMenu' component={MainMenu} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
