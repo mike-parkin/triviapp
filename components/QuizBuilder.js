@@ -6,13 +6,29 @@ import {
     Text,
     Button,
 } from 'react-native'
+import { RadioButton } from 'react-native-papers'
 import RNPickerSelect from 'react-native-picker-select' 
 
 const QuizBuilder = () => {
+    const [form, setForm] = useState({
+        num: '',
+        category: '',
+        difficulty: ''
+    })
 
     return (
         <View>
             <Text>QuizBuilder</Text>
+            <View>
+                <Text>How many Questions?</Text>
+                <RadioButton.Group 
+                    onValueChange={newValue => setForm({...form, num: newValue})}
+                    value={form.num}
+                >
+
+
+                </RadioButton.Group>
+            </View>
             <View>
                 <RNPickerSelect
                     items={[
