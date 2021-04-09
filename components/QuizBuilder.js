@@ -26,7 +26,7 @@ const QuizBuilder = () => {
                     value={form.num}>
                     <View>
                         <Text>5</Text>
-                        <RadioButton value='5' checked='true' />
+                        <RadioButton value='5' defaultChecked />
                     </View>
                     <View>
                         <Text>10</Text>
