@@ -24,13 +24,17 @@ const QuizBuilder = () => {
                 <RadioButton.Group 
                     onValueChange={newValue => setForm({...form, num: newValue})}
                     value={form.num}>
-                    <View>
-                        <Text>5</Text>
+                    <View style={styles.radioButtonBox}>
+                        <Text style={styles.radioButtonText}>5</Text>
                         <RadioButton value='5' status='unchecked'/>
                     </View>
                     <View>
                         <Text>10</Text>
                         <RadioButton value='10' status='checked'/>
+                    </View>
+                    <View>
+                        <Text>15</Text>
+                        <RadioButton value='15' status='unchecked'/>
                     </View>
                 </RadioButton.Group>
             </View>
@@ -47,4 +51,14 @@ const QuizBuilder = () => {
 }
 
 export default QuizBuilder
+
+const styles = StyleSheet.create({
+    radioButtonBox: {
+        flexDirection: 'row',
+        backgroundColor: 'red'
+    },
+    radioButtonText: {
+        margin: 'auto',
+    }
+})
 
