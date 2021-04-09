@@ -11,7 +11,7 @@ import RNPickerSelect from 'react-native-picker-select'
 
 const QuizBuilder = () => {
     const [form, setForm] = useState({
-        num: '',
+        num: '10',
         category: '',
         difficulty: ''
     })
@@ -26,11 +26,11 @@ const QuizBuilder = () => {
                     value={form.num}>
                     <View>
                         <Text>5</Text>
-                        <RadioButton value='5'  />
+                        <RadioButton value='5' status='unchecked'/>
                     </View>
                     <View>
                         <Text>10</Text>
-                        <RadioButton value='10' />
+                        <RadioButton value='10' status='checked'/>
                     </View>
                 </RadioButton.Group>
             </View>
