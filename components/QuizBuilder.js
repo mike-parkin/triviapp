@@ -55,10 +55,8 @@ export default QuizBuilder
 const styles = StyleSheet.create({
     radioButtonBox: {
         flexDirection: 'row',
+        alignItems: 'center',
         backgroundColor: 'red'
     },
-    radioButtonText: {
-        margin: 'auto',
-    }
 })
 
