@@ -62,26 +62,7 @@ exports[`renders correctly 1`] = `
               }
             }
           >
-            <Text
-              accessibilityElementsHidden={true}
-              allowFontScaling={false}
-              importantForAccessibility="no-hide-descendants"
-              pointerEvents="none"
-              selectable={false}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                  },
-                  Object {
-                    "color": "#03dac4",
-                    "fontSize": 24,
-                  },
-                ]
-              }
-            >
-              □
-            </Text>
+            <Text />
           </View>
         </View>
       </View>
@@ -126,26 +107,7 @@ exports[`renders correctly 1`] = `
               }
             }
           >
-            <Text
-              accessibilityElementsHidden={true}
-              allowFontScaling={false}
-              importantForAccessibility="no-hide-descendants"
-              pointerEvents="none"
-              selectable={false}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                  },
-                  Object {
-                    "color": "#03dac4",
-                    "fontSize": 24,
-                  },
-                ]
-              }
-            >
-              □
-            </Text>
+            <Text />
           </View>
         </View>
       </View>
@@ -190,26 +152,7 @@ exports[`renders correctly 1`] = `
               }
             }
           >
-            <Text
-              accessibilityElementsHidden={true}
-              allowFontScaling={false}
-              importantForAccessibility="no-hide-descendants"
-              pointerEvents="none"
-              selectable={false}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                  },
-                  Object {
-                    "color": "#03dac4",
-                    "fontSize": 24,
-                  },
-                ]
-              }
-            >
-              □
-            </Text>
+            <Text />
           </View>
         </View>
       </View>

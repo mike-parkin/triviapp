@@ -5,6 +5,6 @@ module.exports = {
       ],
     setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
     transformIgnorePatterns: [
-        "node_modules/(?!((jest-)?react-native|react-navigation|@react-navigation/.*|react-native-picker-select|\@react-native-picker/.*|@expo/.*|expo))"
+        "node_modules/(?!((jest-)?react-native|react-navigation|@react-navigation/.*|react-native-picker-select|@react-native-picker/.*|@expo/.*|expo|@unimodules/.*|unimodules))"
       ]
   };
