@@ -17,6 +17,7 @@ const qNumberProps = [
 ]
 
 const qDifficultyProps = [
+    {label: 'Any difficulty', value: ''},
     {label: 'Easy', value: 'easy'},
     {label: 'Medium', value: 'medium'},
     {label: 'Hard', value: 'hard'},
@@ -28,8 +29,6 @@ const QuizBuilder = () => {
         category: '',
         difficulty: ''
     })
-
-
 
     return (
         <View style={styles.container}>
@@ -45,6 +44,8 @@ const QuizBuilder = () => {
                     labelStyle={{ paddingRight: 20 }}
                 />
             </View>
+            <Text>Select a difficulty</Text>
+
             <View>
                 <RNPickerSelect
                     onValueChange={newValue => setForm({...form, category: newValue})}
