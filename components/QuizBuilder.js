@@ -6,8 +6,15 @@ import {
     Text,
     Button,
 } from 'react-native'
-import { RadioButton } from 'react-native-paper'
-import RNPickerSelect from 'react-native-picker-select' 
+// import { RadioButton } from 'react-native-paper'
+import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
+import RNPickerSelect from 'react-native-picker-select'
+
+const qNumberProps = [
+    {label: '5', value: '5'},
+    {label: '10', value: '10'},
+    {label: '15', value: '15'},
+]
 
 const QuizBuilder = () => {
     const [form, setForm] = useState({
@@ -16,12 +23,14 @@ const QuizBuilder = () => {
         difficulty: ''
     })
 
+
+
     return (
         <View>
             <Text>QuizBuilder</Text>
             <View>
                 <Text>How many Questions?</Text>
-                <RadioButton.Group 
+                {/* <RadioButton.Group 
                     onValueChange={newValue => setForm({...form, num: newValue})}
                     value={form.num}>
                     <View style={styles.radioButtonBox}>
@@ -36,7 +45,14 @@ const QuizBuilder = () => {
                         <Text>15</Text>
                         <RadioButton value='15' status='unchecked'/>
                     </View>
-                </RadioButton.Group>
+                </RadioButton.Group> */}
+                <RadioForm
+                    radio_props={qNumberProps}
+                    initial={'10'}
+                    onPress={value => {setForm({ ...form, num: value})}}
+                    formHorizontal={true}
+                    labelHorizontal={true}
+                />
             </View>
             <View>
                 <RNPickerSelect
