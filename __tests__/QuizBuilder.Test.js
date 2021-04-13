@@ -1,6 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import QuizBuilder, { form, setForm } from '../components/QuizBuilder'
+import { renderHook, act } from '@testing-library/react-hooks'
+import QuizBuilder from '../components/QuizBuilder'
+
 
 // jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
@@ -9,7 +11,6 @@ test('renders correctly', async () => {
     expect(tree).toMatchSnapshot()
 })
 
-test('Question data changes', async () => {
-    const test = 'test'
-    expect(test).toEqual('test')
+test('Form data changes', async () => {
+    
 })
