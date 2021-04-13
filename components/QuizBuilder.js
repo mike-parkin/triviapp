@@ -6,7 +6,7 @@ import {
     Text,
     Button,
 } from 'react-native'
-// import { RadioButton } from 'react-native-paper'
+import { StatusBar } from 'expo-status-bar'
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 import RNPickerSelect from 'react-native-picker-select'
 
@@ -50,11 +50,13 @@ const QuizBuilder = () => {
                 <RNPickerSelect
                     onValueChange={newValue => setForm({...form, category: newValue})}
                     items={[
-                        {label: "test1", value: "test1"},
-                        {label: "test1", value: "test1"}
+                        {label: "Any Category", value: ""},
+                        {label: "test2", value: "test2"}
                     ]}
+                    value={""}
                 />
             </View>
+            <StatusBar style="light" />
         </View>
     )
 }
