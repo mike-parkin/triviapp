@@ -40,6 +40,7 @@ const QuizBuilder = () => {
             </View>
             <View>
                 <RNPickerSelect
+                    onValueChange={newValue => setForm({...form, category: newValue})}
                     items={[
                         {label: "test1", value: "test1"},
                         {label: "test1", value: "test1"}
