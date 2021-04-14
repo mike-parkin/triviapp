@@ -1,163 +1,776 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <Text>
     QuizBuilder
   </Text>
-  <View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
     <Text>
       How many Questions?
     </Text>
     <View
-      accessibilityRole="radiogroup"
-      accessible={true}
-    >
-      <View
-        style={
+      style={
+        Array [
+          undefined,
+          undefined,
           Object {
-            "alignItems": "center",
-            "backgroundColor": "red",
             "flexDirection": "row",
-          }
-        }
-      >
-        <Text>
-          5
-        </Text>
+          },
+        ]
+      }
+    >
+      <View>
         <View
-          accessibilityLiveRegion="polite"
-          accessibilityRole="radio"
-          accessibilityState={
-            Object {
-              "checked": false,
-              "disabled": undefined,
-            }
-          }
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
             Array [
               Object {
-                "overflow": "hidden",
+                "flexDirection": "row",
+                "marginBottom": 5,
               },
-              Object {
-                "borderRadius": 18,
-                "padding": 6,
-              },
+              undefined,
+              false,
             ]
           }
         >
-          <View
-            style={
-              Object {
-                "opacity": 0,
+          <View>
+            <View
+              accessibilityLabel="radioButtonInput0"
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#2196f3",
+                  "borderRadius": 15,
+                  "borderWidth": 3,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 30,
+                }
               }
+              testID="radioButtonInputradioButton|0"
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 10,
+                    },
+                    false,
+                    false,
+                    false,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessibilityLabel="radioButtonLabel0"
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                undefined,
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "row",
+                },
+              ]
             }
+            testID="radioButtonLabelradioButton|0"
           >
-            <Text />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "lineHeight": 20,
+                    "paddingLeft": 10,
+                  },
+                  false,
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "paddingRight": 20,
+                  },
+                ]
+              }
+            >
+              5
+            </Text>
           </View>
         </View>
       </View>
       <View>
-        <Text>
-          10
-        </Text>
         <View
-          accessibilityLiveRegion="polite"
-          accessibilityRole="radio"
-          accessibilityState={
-            Object {
-              "checked": true,
-              "disabled": undefined,
-            }
-          }
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
             Array [
               Object {
-                "overflow": "hidden",
+                "flexDirection": "row",
+                "marginBottom": 5,
               },
-              Object {
-                "borderRadius": 18,
-                "padding": 6,
-              },
+              undefined,
+              false,
             ]
           }
         >
-          <View
-            style={
-              Object {
-                "opacity": 1,
+          <View>
+            <View
+              accessibilityLabel="radioButtonInput1"
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#2196f3",
+                  "borderRadius": 15,
+                  "borderWidth": 3,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 30,
+                }
               }
+              testID="radioButtonInputradioButton|1"
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 10,
+                    },
+                    Object {
+                      "backgroundColor": "#2196f3",
+                      "height": 20,
+                      "width": 20,
+                    },
+                    Object {
+                      "borderRadius": 10,
+                      "height": 20,
+                      "width": 20,
+                    },
+                    Object {
+                      "backgroundColor": "#2196f3",
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessibilityLabel="radioButtonLabel1"
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                undefined,
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "row",
+                },
+              ]
             }
+            testID="radioButtonLabelradioButton|1"
           >
-            <Text />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "lineHeight": 20,
+                    "paddingLeft": 10,
+                  },
+                  false,
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "paddingRight": 20,
+                  },
+                ]
+              }
+            >
+              10
+            </Text>
           </View>
         </View>
       </View>
       <View>
-        <Text>
-          15
-        </Text>
         <View
-          accessibilityLiveRegion="polite"
-          accessibilityRole="radio"
-          accessibilityState={
-            Object {
-              "checked": false,
-              "disabled": undefined,
-            }
-          }
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
             Array [
               Object {
-                "overflow": "hidden",
+                "flexDirection": "row",
+                "marginBottom": 5,
               },
-              Object {
-                "borderRadius": 18,
-                "padding": 6,
-              },
+              undefined,
+              false,
             ]
           }
         >
-          <View
-            style={
-              Object {
-                "opacity": 0,
+          <View>
+            <View
+              accessibilityLabel="radioButtonInput2"
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#2196f3",
+                  "borderRadius": 15,
+                  "borderWidth": 3,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 30,
+                }
               }
+              testID="radioButtonInputradioButton|2"
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 10,
+                    },
+                    false,
+                    false,
+                    false,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessibilityLabel="radioButtonLabel2"
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                undefined,
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "row",
+                },
+              ]
             }
+            testID="radioButtonLabelradioButton|2"
           >
-            <Text />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "lineHeight": 20,
+                    "paddingLeft": 10,
+                  },
+                  false,
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "paddingRight": 20,
+                  },
+                ]
+              }
+            >
+              15
+            </Text>
           </View>
         </View>
       </View>
     </View>
   </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Text>
+      Choose the difficulty
+    </Text>
+    <View
+      style={
+        Array [
+          undefined,
+          undefined,
+          false,
+        ]
+      }
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+                "marginBottom": 5,
+              },
+              undefined,
+              false,
+            ]
+          }
+        >
+          <View>
+            <View
+              accessibilityLabel="radioButtonInput0"
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#2196f3",
+                  "borderRadius": 15,
+                  "borderWidth": 3,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 30,
+                }
+              }
+              testID="radioButtonInputradioButton|0"
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 10,
+                    },
+                    Object {
+                      "backgroundColor": "#2196f3",
+                      "height": 20,
+                      "width": 20,
+                    },
+                    Object {
+                      "borderRadius": 10,
+                      "height": 20,
+                      "width": 20,
+                    },
+                    Object {
+                      "backgroundColor": "#2196f3",
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessibilityLabel="radioButtonLabel0"
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                undefined,
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "row",
+                },
+              ]
+            }
+            testID="radioButtonLabelradioButton|0"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "lineHeight": 20,
+                    "paddingLeft": 10,
+                  },
+                  false,
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "paddingRight": 20,
+                  },
+                ]
+              }
+            >
+              Any difficulty
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+                "marginBottom": 5,
+              },
+              undefined,
+              false,
+            ]
+          }
+        >
+          <View>
+            <View
+              accessibilityLabel="radioButtonInput1"
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#2196f3",
+                  "borderRadius": 15,
+                  "borderWidth": 3,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 30,
+                }
+              }
+              testID="radioButtonInputradioButton|1"
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 10,
+                    },
+                    false,
+                    false,
+                    false,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessibilityLabel="radioButtonLabel1"
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                undefined,
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "row",
+                },
+              ]
+            }
+            testID="radioButtonLabelradioButton|1"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "lineHeight": 20,
+                    "paddingLeft": 10,
+                  },
+                  false,
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "paddingRight": 20,
+                  },
+                ]
+              }
+            >
+              Easy
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+                "marginBottom": 5,
+              },
+              undefined,
+              false,
+            ]
+          }
+        >
+          <View>
+            <View
+              accessibilityLabel="radioButtonInput2"
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#2196f3",
+                  "borderRadius": 15,
+                  "borderWidth": 3,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 30,
+                }
+              }
+              testID="radioButtonInputradioButton|2"
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 10,
+                    },
+                    false,
+                    false,
+                    false,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessibilityLabel="radioButtonLabel2"
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                undefined,
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "row",
+                },
+              ]
+            }
+            testID="radioButtonLabelradioButton|2"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "lineHeight": 20,
+                    "paddingLeft": 10,
+                  },
+                  false,
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "paddingRight": 20,
+                  },
+                ]
+              }
+            >
+              Medium
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+                "marginBottom": 5,
+              },
+              undefined,
+              false,
+            ]
+          }
+        >
+          <View>
+            <View
+              accessibilityLabel="radioButtonInput3"
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#2196f3",
+                  "borderRadius": 15,
+                  "borderWidth": 3,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 30,
+                }
+              }
+              testID="radioButtonInputradioButton|3"
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 10,
+                    },
+                    false,
+                    false,
+                    false,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessibilityLabel="radioButtonLabel3"
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                undefined,
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "row",
+                },
+              ]
+            }
+            testID="radioButtonLabelradioButton|3"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "lineHeight": 20,
+                    "paddingLeft": 10,
+                  },
+                  false,
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "paddingRight": 20,
+                  },
+                ]
+              }
+            >
+              Hard
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <Text>
+    Select a difficulty
+  </Text>
   <View>
     <View
       style={
@@ -196,14 +809,12 @@ exports[`renders correctly 1`] = `
             style={
               Array [
                 undefined,
-                Object {
-                  "color": "#c7c7cd",
-                },
+                Object {},
               ]
             }
             testID="text_input"
             underlineColorAndroid="transparent"
-            value="Select an item..."
+            value="Any Category"
           />
         </View>
       </View>
@@ -433,21 +1044,21 @@ exports[`renders correctly 1`] = `
                     "value": null,
                   },
                   Object {
-                    "label": "test1",
+                    "label": "Any Category",
                     "testID": undefined,
                     "textColor": undefined,
-                    "value": "test1",
+                    "value": "",
                   },
                   Object {
-                    "label": "test1",
+                    "label": "test2",
                     "testID": undefined,
                     "textColor": undefined,
-                    "value": "test1",
+                    "value": "test2",
                   },
                 ]
               }
               onChange={[Function]}
-              selectedIndex={0}
+              selectedIndex={1}
               style={
                 Array [
                   Object {

@@ -9,13 +9,15 @@ import {
 import { StatusBar } from 'expo-status-bar'
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 import RNPickerSelect from 'react-native-picker-select'
+//api calls
+import { getCategories } from '../api/openTDb'
 
+// props fo the radio buttons
 const qNumberProps = [
     {label: '5', value: '5'},
     {label: '10', value: '10'},
     {label: '15', value: '15'},
 ]
-
 const qDifficultyProps = [
     {label: 'Any difficulty', value: ''},
     {label: 'Easy', value: 'easy'},
@@ -24,11 +26,27 @@ const qDifficultyProps = [
 ]
 
 const QuizBuilder = () => {
+    const [ categories, setCategories ] = useState([])
     const [form, setForm] = useState({
         num: '10',
         category: '',
         difficulty: ''
     })
+
+    const fetchCategories = () => {
+        getCategories()
+            .then(res => {
+                setCategories(res)
+            })
+    }
+
+    useEffect(() => {
+        fetchCategories()
+    }, [])
+    
+    // const catItems = categories.map(category => {
+    //     return { label:  }
+    // })
 
     return (
         <View style={styles.container}>
@@ -45,12 +63,11 @@ const QuizBuilder = () => {
                 />
             </View>
             <View style={styles.qDifficultyRadioGroup}>
-                <Text>How many Questions?</Text>
+                <Text>Choose the difficulty</Text>
                 <RadioForm
                     radio_props={qDifficultyProps}
                     initial={0}
                     onPress={value => {setForm({ ...form, num: value})}}
-                    formHorizontal={true}
                     labelHorizontal={true}
                     labelStyle={{ paddingRight: 20 }}
                 />
@@ -62,7 +79,7 @@ const QuizBuilder = () => {
                     onValueChange={newValue => setForm({...form, category: newValue})}
                     items={[
                         {label: "Any Category", value: ""},
-                        {label: "test2", value: "test2"}
+                        // ...catItems
                     ]}
                     value={""}
                 />
@@ -79,6 +96,9 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     qNumRadioGroup: {
+        alignItems: 'center'
+    },
+    qDifficultyRadioGroup: {
         alignItems: 'center'
     }
 })

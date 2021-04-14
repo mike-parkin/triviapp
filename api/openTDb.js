@@ -12,6 +12,7 @@ export const getQuestions = () => {
 export const getCategories = () => {
     return axios.get(catUrl)
         .then(response => {
-            response.trivia_categories
+            console.log(response.data.trivia_categories)
+            return response.data.trivia_categories
         })
 }
