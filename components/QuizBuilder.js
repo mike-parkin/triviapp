@@ -45,7 +45,7 @@ const QuizBuilder = () => {
     }, [])
     
     const catItems = categories.map(category => {
-        return { label: category.name, value: category.name }
+        return { label: category.name, value: toString(category.id) }
     })
 
     console.log(catItems)
