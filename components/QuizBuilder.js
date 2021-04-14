@@ -44,9 +44,11 @@ const QuizBuilder = () => {
         fetchCategories()
     }, [])
     
-    // const catItems = categories.map(category => {
-    //     return { label:  }
-    // })
+    const catItems = categories.map(category => {
+        return { label: category.name, value: category.name }
+    })
+
+    console.log(catItems)
 
     return (
         <View style={styles.container}>
@@ -79,7 +81,7 @@ const QuizBuilder = () => {
                     onValueChange={newValue => setForm({...form, category: newValue})}
                     items={[
                         {label: "Any Category", value: ""},
-                        // ...catItems
+                        ...catItems
                     ]}
                     value={""}
                 />
