@@ -44,6 +44,17 @@ const QuizBuilder = () => {
                     labelStyle={{ paddingRight: 20 }}
                 />
             </View>
+            <View style={styles.qDifficultyRadioGroup}>
+                <Text>How many Questions?</Text>
+                <RadioForm
+                    radio_props={qDifficultyProps}
+                    initial={0}
+                    onPress={value => {setForm({ ...form, num: value})}}
+                    formHorizontal={true}
+                    labelHorizontal={true}
+                    labelStyle={{ paddingRight: 20 }}
+                />
+            </View>
             <Text>Select a difficulty</Text>
 
             <View>
