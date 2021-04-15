@@ -14,11 +14,13 @@ const MainMenu = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text>Main Menu</Text>
-            <Button
-                title="Go to QuizBuilder"
-                onPress={() => navigation.navigate('QuizBuilder')}
-            />
-            <StatusBar style="light" />
+            <View style={styles.buttonContainer}>
+                <Button
+                    title="Go to QuizBuilder"
+                    onPress={() => navigation.navigate('QuizBuilder')}
+                />
+                <StatusBar style="light" />
+            </View>
         </View>    
     )
 }
@@ -28,6 +30,11 @@ export default MainMenu
 const styles = new StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ddd' 
+        backgroundColor: '#ddd',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    buttonContainer: {
+        width: '70%'
     }
 })
