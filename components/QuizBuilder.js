@@ -48,8 +48,6 @@ const QuizBuilder = () => {
         return { label: category.name, value: toString(category.id) }
     })
 
-    console.log(catItems)
-
     return (
         <View style={styles.container}>
             <Text>QuizBuilder</Text>
