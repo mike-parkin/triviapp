@@ -24,17 +24,31 @@ const QuizPage = ({ navigation, route }) => {
     },[])
 
     return (
-        <View>
+        <View style={styles.container}>
             {questions.map(question => {
                 return(
                     // the response comes through encoded with base64 'atob()' converts this into a string
-                    <Text>{atob(question.question)}</Text>
+                    <View style={styles.questionCard}>
+                        <Text>{atob(question.question)}</Text>
+                    </View>
                 )
             })}
         </View>
     )
-
 }
 
 
 export default QuizPage
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#ddd'
+    },
+    questionCard: {
+        marginHorizontal: 10,
+        marginVertical: 10,
+        borderWidth: 1,
+        borderColor: '#ccc'
+    }
+}) 
