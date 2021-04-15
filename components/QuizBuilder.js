@@ -72,9 +72,8 @@ const QuizBuilder = () => {
                     labelStyle={{ paddingRight: 20 }}
                 />
             </View>
-            <Text>Select a difficulty</Text>
-
-            <View>
+            <View style={styles.categorySelector}>
+                <Text>Select a difficulty</Text>
                 <RNPickerSelect
                     onValueChange={newValue => setForm({...form, category: newValue})}
                     items={[
@@ -100,6 +99,11 @@ const styles = StyleSheet.create({
     },
     qDifficultyRadioGroup: {
         alignItems: 'center'
+    },
+    categorySelector: {
+        alignItems: 'center',
+        marginHorizontal: 'auto',
+        width: '70%'
     }
 })
 
