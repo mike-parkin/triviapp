@@ -25,7 +25,7 @@ const qDifficultyProps = [
     {label: 'Hard', value: 'hard'},
 ]
 
-const QuizBuilder = () => {
+const QuizBuilder = ({ navigation }) => {
     const [ categories, setCategories ] = useState([])
     const [form, setForm] = useState({
         num: '10',
@@ -83,6 +83,10 @@ const QuizBuilder = () => {
                     value={""}
                 />
             </View>
+            <Button
+                title="Create Quiz"
+                onPress={() => navigation.navigate("QuizPage")}
+            />
             <StatusBar style="light" />
         </View>
     )
