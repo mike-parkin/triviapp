@@ -7,7 +7,8 @@ import {
 } from 'react-native'
 import { getQuestions } from '../api/openTDb'
 
-const QuizPage = () => {
+const QuizPage = ({ navigation, route }) => {
+    const form = route.params
     const [ questions, setQuestions ] = useState([])
 
     const fetchQuestions = () => {

@@ -85,7 +85,7 @@ const QuizBuilder = ({ navigation }) => {
             </View>
             <Button
                 title="Create Quiz"
-                onPress={() => navigation.navigate("QuizPage")}
+                onPress={() => navigation.navigate("QuizPage", { form: form })}
             />
             <StatusBar style="light" />
         </View>
