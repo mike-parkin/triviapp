@@ -45,7 +45,7 @@ const QuizBuilder = ({ navigation }) => {
     }, [])
     
     const catItems = categories.map(category => {
-        return { label: category.name, value: toString(category.id) }
+        return { label: category.name, value: category.id }
     })
 
     return (
@@ -67,7 +67,7 @@ const QuizBuilder = ({ navigation }) => {
                 <RadioForm
                     radio_props={qDifficultyProps}
                     initial={0}
-                    onPress={value => {setForm({ ...form, num: value})}}
+                    onPress={value => {setForm({ ...form, difficulty: value})}}
                     labelHorizontal={true}
                     labelStyle={{ paddingRight: 20 }}
                 />
