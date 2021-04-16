@@ -8,11 +8,11 @@ import {
 import { getQuestions } from '../api/openTDb'
 
 const QuizPage = ({ navigation, route }) => {
-    const form = route.params
+    const form = route.params.form
     const [ questions, setQuestions ] = useState([])
 
-    const fetchQuestions = () => {
-        return getQuestions()
+    const fetchQuestions = (form) => {
+        return getQuestions(form)
         .then(response => {
             console.log(response)
             setQuestions(response.data.results)
@@ -20,7 +20,8 @@ const QuizPage = ({ navigation, route }) => {
     }
 
     useEffect(() => {
-        fetchQuestions()
+        console.log(form);
+        fetchQuestions(form)
     },[])
 
     return (
