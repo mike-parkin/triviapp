@@ -1,3 +1,4 @@
+import { ADD_ANSWER } from '../actions'
 
 const intialState = []
 
