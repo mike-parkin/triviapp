@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { decode, encode } from 'base-64'
 import {
     StyleSheet,
     Button,
@@ -30,7 +31,7 @@ const QuizPage = ({ navigation, route }) => {
                 return(
                     // the response comes through encoded with base64 'atob()' converts this into a string
                     <View style={styles.questionCard}>
-                        <Text>{atob(question.question)}</Text>
+                        <Text>{decode(question.question)}</Text>
                     </View>
                 )
             })}
