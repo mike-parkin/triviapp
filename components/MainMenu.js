@@ -42,6 +42,7 @@ const styles = new StyleSheet.create({
         alignItems: 'center'
     },
     buttonContainer: {
+        marginVertical: 10,
         width: '70%'
     }
 })
