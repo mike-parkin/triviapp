@@ -21,6 +21,13 @@ const MainMenu = ({ navigation }) => {
                 />
                 <StatusBar style="light" />
             </View>
+            <View style={styles.buttonContainer}>
+                <Button
+                    title="App Details"
+                    onPress={() => navigation.navigate('Details')}
+                />
+                <StatusBar style="light" />
+            </View>
         </View>    
     )
 }
