@@ -83,10 +83,12 @@ const QuizBuilder = ({ navigation }) => {
                     value={""}
                 />
             </View>
-            <Button
-                title="Create Quiz"
-                onPress={() => navigation.navigate("QuizPage", { form: form })}
-            />
+            <View>
+                <Button
+                    title="Create Quiz"
+                    onPress={() => navigation.navigate("QuizPage", { form: form })}
+                />
+            </View>
             <StatusBar style="light" />
         </View>
     )
@@ -107,6 +109,7 @@ const styles = StyleSheet.create({
     categorySelector: {
         alignItems: 'center',
         marginHorizontal: 'auto',
+        marginVertical: '20px',
         width: '70%'
     }
 })
