@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { connect, useDispatch as dispatch } from 'react-redux'
 import { decode } from 'base-64'
 import {
     StyleSheet,
@@ -7,6 +8,7 @@ import {
     Text,
 } from 'react-native'
 import { getQuestions } from '../api/openTDb'
+import { setCorrectAnswers } from '../actions/index' 
 
 import QuestionCard from './QuestionCard'
 
@@ -14,14 +16,22 @@ const QuizPage = ({ navigation, route }) => {
     const form = route.params.form
     const [ questions, setQuestions ] = useState([])
 
+    // const getCorrectAnswers = (questionSet) => {
+    //     return questionSet.map(question => {
+    //         return decode(question.correct_answer)
+    //     })
+    // }
+
     const fetchQuestions = (form) => {
         return getQuestions(form)
         .then(response => {
-            console.log(response)
-            setQuestions(response.data.results)
+            console.log(response.data.results)
+            const questionSet = response.data.results
+            setQuestions(questionSet)
+            // dispatch(setCorrectAnswers(getCorrectAnswers(questionSet)))
         })
     }
-
+    
     useEffect(() => {
         console.log(form);
         fetchQuestions(form)
@@ -31,17 +41,16 @@ const QuizPage = ({ navigation, route }) => {
         <View style={styles.container}>
             {questions.map(question => {
                 return(
-                    // the response comes through encoded with base64 'atob()' converts this into a string
-
-                    <QuestionCard />
+                    <QuestionCard questionData={question} key={question.id} />
                 )
             })}
         </View>
     )
 }
 
+export default connect()(QuizPage)
 
-export default QuizPage
+
 
 const styles = StyleSheet.create({
     container: {

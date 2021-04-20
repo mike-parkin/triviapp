@@ -8,7 +8,11 @@ import RadioForm, {
 import { decode } from 'base-64'
 
 
-const QuestionCard = (props) => {
+const QuestionCard = ({ questionData }) => {
+    
+
+    console.log(questionData)
+
     return (
         <Text>I am a QuestionCard</Text>
     )

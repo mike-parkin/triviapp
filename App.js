@@ -4,9 +4,10 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, View } from 'react-native'
-import { Provider } from 'react-redux'
-import { createStore, compose } from 'redux'
 // redux
+import { Provider } from 'react-redux'
+import { createStore, compose, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 import reducers from './reducers'
 // componets
 import MainMenu from './components/MainMenu'
@@ -14,7 +15,8 @@ import QuizBuilder from './components/QuizBuilder'
 import QuizPage from './components/QuizPage'
 import Details from './components/Details'
 
-const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)))
 const Stack = createStackNavigator()
 
 export default function App() {
