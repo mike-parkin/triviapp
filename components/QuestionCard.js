@@ -13,8 +13,19 @@ const QuestionCard = ({ questionData }) => {
     console.log(questionData)
 
     return (
-        <Text>I am a QuestionCard</Text>
+        <View style={styles.questionCard}>
+            <Text>Quiz Me with your rhythm stick</Text>
+        </View>
     )
 }
 
 export default QuestionCard
+
+const styles = StyleSheet.create({
+    questionCard: {
+        marginHorizontal: 10,
+        marginVertical: 10,
+        borderColor: 'black',
+        borderWidth: 3
+    }
+})
