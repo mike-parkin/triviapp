@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
 
 import quizUserAnswers from './quizUserAnswers'
+import quizCorrectAnswers from './quizCorrectAnswers'
 
 const reducers = combineReducers({
-    quizUserAnswers
+    quizUserAnswers,
+    quizCorrectAnswers
 })
 
 export default reducers
