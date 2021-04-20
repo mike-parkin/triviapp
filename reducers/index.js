@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import quizReducer from './quiz'
+import quizUserAnswers from './quizUserAnswers'
 
 const reducers = combineReducers({
-    quizReducer
+    quizUserAnswers
 })
 
 export default reducers

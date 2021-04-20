@@ -8,6 +8,8 @@ import {
 } from 'react-native'
 import { getQuestions } from '../api/openTDb'
 
+import QuestionCard from './QuestionCard'
+
 const QuizPage = ({ navigation, route }) => {
     const form = route.params.form
     const [ questions, setQuestions ] = useState([])
@@ -30,9 +32,8 @@ const QuizPage = ({ navigation, route }) => {
             {questions.map(question => {
                 return(
                     // the response comes through encoded with base64 'atob()' converts this into a string
-                    <View style={styles.questionCard}>
-                        <Text>{decode(question.question)}</Text>
-                    </View>
+
+                    <QuestionCard />
                 )
             })}
         </View>
