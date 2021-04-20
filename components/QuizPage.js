@@ -8,6 +8,7 @@ import {
     Text,
 } from 'react-native'
 import { getQuestions } from '../api/openTDb'
+import { fetchQandAs } from '../actions'
 import { setCorrectAnswers } from '../actions/index' 
 
 import QuestionCard from './QuestionCard'
@@ -15,25 +16,25 @@ import QuestionCard from './QuestionCard'
 const QuizPage = ({ navigation, route }) => {
     const form = route.params.form
     const [ questions, setQuestions ] = useState([])
+    const [ correctAnswers, setCorrectAnswers ] = useState([])
 
-    // const getCorrectAnswers = (questionSet) => {
-    //     return questionSet.map(question => {
-    //         return decode(question.correct_answer)
-    //     })
-    // }
+    const getCorrectAnswers = (questionSet) => {
+        return questionSet.map(question => {
+            return decode(question.correct_answer)
+        })
+    }
 
     const fetchQuestions = (form) => {
         return getQuestions(form)
-        .then(response => {
-            console.log(response.data.results)
-            const questionSet = response.data.results
-            setQuestions(questionSet)
-            // dispatch(setCorrectAnswers(getCorrectAnswers(questionSet)))
-        })
+            .then(response => {
+                console.log(response.data.results)
+                const questionSet = response.data.results
+                setQuestions(questionSet)
+                setCorrectAnswers(getCorrectAnswers(questionSet))
+            })
     }
     
     useEffect(() => {
-        console.log(form);
         fetchQuestions(form)
     },[])
 
@@ -41,7 +42,7 @@ const QuizPage = ({ navigation, route }) => {
         <View style={styles.container}>
             {questions.map(question => {
                 return(
-                    <QuestionCard questionData={question} key={question.id} />
+                    <QuestionCard questionData={question}  />
                 )
             })}
         </View>
