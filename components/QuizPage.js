@@ -8,15 +8,13 @@ import {
     Text,
 } from 'react-native'
 import { getQuestions } from '../api/openTDb'
-import { fetchQandAs } from '../actions'
 import { setCorrectAnswers } from '../actions/index' 
 
 import QuestionCard from './QuestionCard'
 
-const QuizPage = ({ navigation, route }) => {
+const QuizPage = ({  route, dispatch }) => {
     const form = route.params.form
     const [ questions, setQuestions ] = useState([])
-    const [ correctAnswers, setCorrectAnswers ] = useState([])
 
     const getCorrectAnswers = (questionSet) => {
         return questionSet.map(question => {
@@ -24,13 +22,16 @@ const QuizPage = ({ navigation, route }) => {
         })
     }
 
+
+    // retieves questions from external api and sets the correct answers in global state
     const fetchQuestions = (form) => {
         return getQuestions(form)
             .then(response => {
                 console.log(response.data.results)
                 const questionSet = response.data.results
                 setQuestions(questionSet)
-                setCorrectAnswers(getCorrectAnswers(questionSet))
+                const correctAnswers = getCorrectAnswers(questionSet)
+                dispatch(setCorrectAnswers(correctAnswers))
             })
     }
     

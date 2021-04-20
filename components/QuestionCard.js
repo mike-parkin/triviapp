@@ -10,7 +10,6 @@ import { decode } from 'base-64'
 
 const QuestionCard = ({ questionData }) => {
     
-
     console.log(questionData)
 
     return (
