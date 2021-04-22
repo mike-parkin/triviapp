@@ -11,10 +11,14 @@ import { decode } from 'base-64'
 const QuestionCard = ({ questionData }) => {
     
     console.log(questionData)
-
+    const answers = [
+        ...questionData.incorrect_answers, 
+        questionData.correct_answer
+    ]
+    console.log(answers)
     return (
         <View style={styles.questionCard}>
-            <Text>Quiz Me with your rhythm stick</Text>
+            <Text>{decode(questionData.question)}</Text>
         </View>
     )
 }
