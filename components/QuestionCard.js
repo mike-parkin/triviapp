@@ -10,11 +10,13 @@ import { decode } from 'base-64'
 
 const QuestionCard = ({ questionData }) => {
     
-    console.log(questionData)
-    const answers = [
-        ...questionData.incorrect_answers, 
+    const answers = questionData.incorrect_answers
+    answers.splice(
+        Math.floor(Math.random() * questionData.incorrect_answers.length),
+        0,
         questionData.correct_answer
-    ]
+    )
+
     console.log(answers)
     return (
         <View style={styles.questionCard}>
