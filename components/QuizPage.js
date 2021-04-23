@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { connect, useDispatch as dispatch } from 'react-redux'
+import { connect } from 'react-redux'
 import { decode } from 'base-64'
 import {
     StyleSheet,
@@ -12,7 +12,7 @@ import { setCorrectAnswers } from '../actions/index'
 
 import QuestionCard from './QuestionCard'
 
-const QuizPage = ({  route, dispatch }) => {
+const QuizPage = ({ route, dispatch }) => {
     const form = route.params.form
     const [ questions, setQuestions ] = useState([])
 
