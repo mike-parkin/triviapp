@@ -17,10 +17,15 @@ const QuestionCard = ({ questionData }) => {
         questionData.correct_answer
     )
 
-    console.log(answers)
+    const answerProps = answers.map(answer => {
+        return { label: decode(answer), value: decode(answer)}
+    })
+
+    console.log(answerProps)
     return (
         <View style={styles.questionCard}>
             <Text>{decode(questionData.question)}</Text>
+            
         </View>
     )
 }
