@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 import RadioForm, {
     RadioButton,
@@ -16,7 +16,6 @@ const QuestionCard = ({ questionData }) => {
         0,
         questionData.correct_answer
     )
-
     const answerProps = answers.map(answer => {
         return { label: decode(answer), value: decode(answer)}
     })
@@ -25,7 +24,11 @@ const QuestionCard = ({ questionData }) => {
     return (
         <View style={styles.questionCard}>
             <Text>{decode(questionData.question)}</Text>
-            
+            <RadioForm 
+                radio_props={answerProps}
+                labelHorizontal={true}
+                initial={''}
+            />
         </View>
     )
 }
