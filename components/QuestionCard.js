@@ -9,7 +9,8 @@ import RadioForm, {
 import { decode } from 'base-64'
 
 
-const QuestionCard = ({ questionData, dispatch }) => {
+const QuestionCard = ({ questionData, dispatch, key }) => {
+    console.log(key)
     // sets the condition for the answerSelect function
     const [ isAnswered, setIsAnswered ] = useState(false)
     // randomly sort the answers for a question in an array     
@@ -29,7 +30,7 @@ const QuestionCard = ({ questionData, dispatch }) => {
     }
 
     return (
-        <View style={styles.questionCard}>
+        <View style={styles.questionCard} >
             <Text>{decode(questionData.question)}</Text>
             <RadioForm 
                 radio_props={answerProps}
