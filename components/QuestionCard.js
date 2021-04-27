@@ -10,6 +10,8 @@ import { decode } from 'base-64'
 
 
 const QuestionCard = ({ questionData, dispatch }) => {
+    // sets the condition for the answerSelect function
+    const [ isAnswered, setIsAnswered ] = useState(false)
     // randomly sort the answers for a question in an array     
     const answers = questionData.incorrect_answers
     answers.splice(
@@ -22,7 +24,6 @@ const QuestionCard = ({ questionData, dispatch }) => {
     })
     
     // handles the change of answers
-    let isAnswered = false
     const handleAnswerSelect = (answer) => {
         
     }
