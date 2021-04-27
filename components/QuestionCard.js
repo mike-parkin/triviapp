@@ -8,12 +8,15 @@ import RadioForm, {
     RadioButtonLabel
 } from 'react-native-simple-radio-button'
 import { decode } from 'base-64'
+import { addAnswer } from '../actions'
 
 
 const QuestionCard = ({ questionData, dispatch }) => {
     const [ htmlId ] = useId()
+
     // sets the condition for the answerSelect function
     const [ isAnswered, setIsAnswered ] = useState(false)
+
     // randomly sort the answers for a question in an array     
     const answers = questionData.incorrect_answers
     answers.splice(
@@ -24,10 +27,18 @@ const QuestionCard = ({ questionData, dispatch }) => {
     const answerProps = answers.map(answer => {
         return { label: decode(answer), value: decode(answer)}
     })
-    console.log(htmlId)
     // handles the change of answers
     const handleAnswerSelect = (answer) => {
-        
+        if(!isAnswered) {
+            const payLoad = {
+                questionId: htmlId,
+                answer
+            }
+            dispatch(addAnswer(payLoad))
+            setIsAnswered(true)
+        } else {
+            // use a new action to edit the array in store
+        }
     }
 
     return (
