@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { decode } from 'base-64'
-import { useId } from 'react-id-generator'
+
 import {
     StyleSheet,
     Button,
@@ -15,7 +15,6 @@ import QuestionCard from './QuestionCard'
 
 const QuizPage = ({ route, dispatch }) => {
     const form = route.params.form
-    const [htmlId] = useId() 
     const [ questions, setQuestions ] = useState([])
 
     const getCorrectAnswers = (questionSet) => {
@@ -45,7 +44,7 @@ const QuizPage = ({ route, dispatch }) => {
         <View style={styles.container}>
             {questions.map(question => {
                 return(
-                    <QuestionCard questionData={question} key={htmlId} />
+                    <QuestionCard questionData={question} key={question.question} />
                 )
             })}
         </View>

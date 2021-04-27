@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { StyleSheet, View, Text } from 'react-native'
+import { useId } from 'react-id-generator'
 import RadioForm, {
     RadioButton,
     RadioButtonInput,
@@ -9,8 +10,8 @@ import RadioForm, {
 import { decode } from 'base-64'
 
 
-const QuestionCard = ({ questionData, dispatch, key }) => {
-    console.log(key)
+const QuestionCard = ({ questionData, dispatch }) => {
+    const [ htmlId ] = useId()
     // sets the condition for the answerSelect function
     const [ isAnswered, setIsAnswered ] = useState(false)
     // randomly sort the answers for a question in an array     
@@ -23,14 +24,14 @@ const QuestionCard = ({ questionData, dispatch, key }) => {
     const answerProps = answers.map(answer => {
         return { label: decode(answer), value: decode(answer)}
     })
-    
+    console.log(htmlId)
     // handles the change of answers
     const handleAnswerSelect = (answer) => {
         
     }
 
     return (
-        <View style={styles.questionCard} >
+        <View style={styles.questionCard} key={htmlId}>
             <Text>{decode(questionData.question)}</Text>
             <RadioForm 
                 radio_props={answerProps}

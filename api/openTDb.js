@@ -18,7 +18,6 @@ const createRequestUrl = (form) => {
 
 export const getQuestions = (form) => {
     const getUrl = createRequestUrl(form) + encode
-    console.log(getUrl)
     return axios.get(getUrl)
         .then(response => response)
 }
