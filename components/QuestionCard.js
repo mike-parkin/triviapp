@@ -8,7 +8,7 @@ import RadioForm, {
     RadioButtonLabel
 } from 'react-native-simple-radio-button'
 import { decode } from 'base-64'
-import { addAnswer } from '../actions'
+import { addAnswer, changeAnswer } from '../actions'
 
 
 const QuestionCard = ({ questionData, dispatch }) => {
@@ -29,15 +29,17 @@ const QuestionCard = ({ questionData, dispatch }) => {
     })
     // handles the change of answers
     const handleAnswerSelect = (answer) => {
+        console.log('hi')
+        const payLoad = {
+            questionId: htmlId,
+            answer
+        }
         if(!isAnswered) {
-            const payLoad = {
-                questionId: htmlId,
-                answer
-            }
             dispatch(addAnswer(payLoad))
             setIsAnswered(true)
         } else {
             // use a new action to edit the array in store
+            dispatch(changeAnswer(payLoad))
         }
     }
 
@@ -48,13 +50,13 @@ const QuestionCard = ({ questionData, dispatch }) => {
                 radio_props={answerProps}
                 labelHorizontal={true}
                 initial={''}
-                onChange={newValue => handleAnswerSelect(newValue)}
+                onPress={newValue => handleAnswerSelect(newValue)}
             />
         </View>
     )
 }
 
-export default QuestionCard
+export default connect()(QuestionCard)
 
 const styles = StyleSheet.create({
     questionCard: {
